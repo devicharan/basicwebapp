@@ -1,0 +1,24 @@
+syntax ="proto3";
+
+package protos;
+
+import "Product.proto";
+
+service RecommendationService {
+
+    rpc GetRecommendations(Product) returns (RecommendationResponse);
+}
+
+ 
+message RecommendationResponse{
+
+    message Recommendation{
+
+          int32 rating =1;
+
+          int32 productid=2;
+    }
+    repeated Recommendation result=1;
+
+}
+

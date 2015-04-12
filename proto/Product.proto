@@ -1,0 +1,11 @@
+syntax ="proto3";
+
+package protos;
+
+message Product {
+
+      string name=1;
+      int32 id =2;
+      string vendor=3;
+
+}

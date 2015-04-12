@@ -1,0 +1,28 @@
+syntax ="proto3";
+
+package protos;
+
+import "Product.proto";
+
+service CatalogService {
+
+    rpc GetProductCatalog(CatalogRequest) returns (CatalogResponse) {}
+
+}
+
+message Category {
+
+      string categoryName=1;
+}
+
+message CatalogResponse {
+
+    repeated Product products =1;
+
+}
+
+message CatalogRequest {
+
+      Category category=1;
+}
+
